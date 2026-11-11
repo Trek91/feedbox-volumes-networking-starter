@@ -1,0 +1,9 @@
+services:
+  api:
+    command: npx nodemon -L server.js
+    volumes:
+      - .:/app
+      - /app/node_modules
+  web:
+    volumes:
+      - ./client/index.html:/usr/share/nginx/html/index.html:ro
